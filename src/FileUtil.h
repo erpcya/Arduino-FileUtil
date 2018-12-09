@@ -22,17 +22,30 @@
  * This class if used for handle all file writer
  * you can define a device name
  */
+static const uint8_t TXT_FORMAT =          1; // txt Format
+static const uint8_t CSV_FORMAT =          2; // csv Format
+static const uint8_t TSV_FORMAT =          3; // tsv Format
+static const uint8_t KEY_VALUE_FORMAT =    4; // key value Format
+//	Separator
+static const char TXT_SEPARATOR =          '|'; // txt separator
+static const char CSV_SEPARATOR =          ','; // csv separator
+static const char TSV_SEPARATOR =          '\t'; // tsv separator
+
 class FileUtil {
     public:
-        FileUtil(String prefixFileName, int chipSelected, short fileFormat);
-        void openFile();
-        void closeFile();
+        FileUtil(String prefixFileName, uint8_t chipSelected, uint8_t fileFormat);
+        void open();
+        void close();
         boolean write(String valueToWrite);
-        boolean writeln(String valueToWrite);
+        boolean newLine();
+        String getFileName();
     private:
+    	void initValues();
         String _prefixFileName;
-        int _chipSelected;
-        short _fileFormat;
+        uint8_t _chipSelected;
+        uint8_t _fileFormat;
+        char _separator;
+        String _fileName;
         File _fileToWrite;
-}
+};
 #endif
