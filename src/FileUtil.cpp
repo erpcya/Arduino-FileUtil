@@ -1,7 +1,7 @@
 /*************************************************************************************
  * Product: Device-Suite (Device Control Suite)                                      *
  * This program is free software; you can redistribute it and/or modify it           *
- * under the terms version 2 or later of the GNU General Public License as published *
+ * under the terms version 3 of the GNU General Public License as published          *
  * by the Free Software Foundation. This program is distributed in the hope          *
  * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied        *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                  *
